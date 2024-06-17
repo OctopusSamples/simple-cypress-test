@@ -3,9 +3,10 @@ This is a simple Cypress test configured to create a HTML report.
 This test can be run in Octopus from a worker container built with the following `Dockerfile`:
 
 ```
-FROM cypress/included:6.4.0
-RUN apt-get update; apt-get install -y libicu-dev
-RUN npm install -g inline-assets
+FROM cypress/included:9.7.0
+RUN apt-get update; \
+    apt-get install -y libicu67
+RUN npm install -g inline-assets mochawesome
 ENTRYPOINT []
 ```
 
