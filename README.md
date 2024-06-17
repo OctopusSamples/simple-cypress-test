@@ -5,8 +5,8 @@ This test can be run in Octopus from a worker container built with the following
 ```
 FROM cypress/included:9.7.0
 RUN apt-get update; \
-    apt-get install -y libicu67
-RUN npm install -g inline-assets mochawesome
+    apt-get install -y libicu67 colorized-logs
+RUN npm install -g inline-assets
 ENTRYPOINT []
 ```
 
